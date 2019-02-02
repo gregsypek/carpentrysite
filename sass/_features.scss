@@ -1,0 +1,52 @@
+.features {
+    display: grid;
+
+    grid-gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+
+    &__header {
+        display: grid;
+        grid-column: 1/-1;
+        justify-items: center;
+        justify-content: center;
+        padding: 5rem;
+        background: rgba(155, 130, 129, .7);
+
+        // align-self: center;
+        h2 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+            // grid-column: 2 /-2;
+        }
+    }
+}
+
+.feature {
+    display: grid;
+    grid-gap: 2rem;
+    background: rgba(155, 130, 129, .7);
+    justify-items: center;
+    padding: 3rem;
+
+    &__icon {
+        fill: $color-light-2;
+        // justify-items: center;
+        width: 7rem;
+        height: 7rem;
+
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+}
