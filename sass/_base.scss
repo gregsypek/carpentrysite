@@ -26,7 +26,7 @@ html {
     font-weight: 400;
     font-size: 62.5%; //10px
     color: var(--black);
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+    // text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
 }
 
 *,
@@ -37,7 +37,7 @@ html {
 
 body {
     background-image: url("../img/topography.svg"),
-        linear-gradient(110deg, $color-brown-1, $color-brown-2);
+        linear-gradient(110deg, $color-light-2, $color-dark-1);
     background-size: 340px, auto;
     min-height: calc(100vh - 100px);
     margin: 50px;
@@ -55,6 +55,5 @@ h6 {
 
 .wrapper {
     display: grid;
-    grid-template-rows: 100vh repeat(2, min-content) repeat(2, minmax(50vh, auto)) 20vh;
-    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])[center-end] minmax(3rem, 1fr) [full-end];
+    grid-gap: 2rem;
 }
