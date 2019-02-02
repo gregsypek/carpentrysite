@@ -1,0 +1,60 @@
+//COLOR VARIABLES
+$color-brown-1:#D09E88;
+$color-brown-2: #9B8281;
+
+$color-black: #272727;
+
+$color-light-1: #F0ECE2;
+$color-light-2: #DFD3C3;
+
+$color-dark-1: #c7b198;
+$color-dark-2:#596e79;
+
+// FONT VARIABLES
+$font-primary: 'Roboto',
+sans-serif;
+
+:root {
+    --black: #272727;
+}
+
+
+html {
+
+    box-sizing: border-box;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 62.5%; //10px
+    color: var(--black);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url("../img/topography.svg"),
+        linear-gradient(110deg, $color-brown-1, $color-brown-2);
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    /* background-attachment: fixed; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 5px 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 100vh repeat(2, min-content) repeat(2, minmax(50vh, auto)) 20vh;
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])[center-end] minmax(3rem, 1fr) [full-end];
+}
