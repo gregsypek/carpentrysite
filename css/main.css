@@ -97,6 +97,26 @@ h6 {
   font-size: 1.8rem;
 }
 
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.gallery h2 {
+  grid-column: 1/-1;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 3rem;
+  padding: 5rem;
+}
+
+.gallery img {
+  width: 100%;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -207,7 +227,83 @@ h6 {
   display: none;
 }
 
-.header__hero > *, .header__logo, .header__btn {
+.range {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  -ms-grid-rows: max-content (1fr)[5] max-content;
+      grid-template-rows: -webkit-max-content repeat(5, 1fr) -webkit-max-content;
+      grid-template-rows: max-content repeat(5, 1fr) max-content;
+}
+
+.range__hero {
+  grid-row: 1/-1;
+}
+
+.range__hero img {
+  width: 100%;
+}
+
+.range__list {
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+.range .item1 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.range__header {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.range__header h2 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 3rem;
+}
+
+.range__header p {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 2rem;
+}
+
+.range__info {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  grid-row: 7/8;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.range__info--btn {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.header__hero > *, .header__logo, .header__btn, .range__list, .range .item1, .range__header, .range__info {
   background: rgba(223, 211, 195, 0.7);
 }
 

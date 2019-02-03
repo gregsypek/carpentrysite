@@ -1,0 +1,63 @@
+.range {
+    display: grid;
+    grid-gap: 1.5rem;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: max-content repeat(5, 1fr) max-content;
+
+    &__hero {
+
+        grid-row: 1/-1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        @extend %color-light-transparent;
+        font-size: 2rem;
+        // height: 100%;
+        // line-height: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .item1 {
+        grid-row: 2/3;
+        @extend %color-light-transparent;
+    }
+
+
+    &__header {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        @extend %color-light-transparent;
+
+        h2 {
+            justify-self: center;
+            font-size: 3rem;
+        }
+
+        p {
+            justify-self: center;
+            font-size: 2rem;
+        }
+    }
+
+    &__info {
+        @extend %color-light-transparent;
+        grid-column: 2/3;
+        grid-row: 7/8;
+        display: grid;
+        justify-content: center;
+
+        &--btn {
+
+            justify-self: center;
+        }
+
+    }
+}
