@@ -236,8 +236,9 @@ h6 {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -ms-grid-columns: 1fr 4fr;
-      grid-template-columns: 1fr 4fr;
+  margin-top: 5rem;
+  -ms-grid-columns: 2fr 4fr;
+      grid-template-columns: 2fr 4fr;
   -ms-grid-rows: max-content (1fr)[5] max-content;
       grid-template-rows: -webkit-max-content repeat(5, 1fr) -webkit-max-content;
       grid-template-rows: max-content repeat(5, 1fr) max-content;
@@ -245,22 +246,26 @@ h6 {
 
 .range__hero {
   grid-row: 1/-1;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
 
 .range__hero img {
   width: 100%;
+  height: 100%;
 }
 
 .range__list {
   font-size: 2rem;
-  padding: 1rem;
+  padding: 1.5rem 0 1.5rem 10rem;
   margin: 0;
-}
-
-.range .item1 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+  letter-spacing: .5rem;
+  font-weight: 700;
+  border-bottom: 0.5rem solid #9B8281;
+  border-top: 0.5rem solid #9B8281;
 }
 
 .range__header {
@@ -270,6 +275,12 @@ h6 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  display: -ms-grid;
+  display: grid;
+  padding: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .range__header h2 {
@@ -298,13 +309,21 @@ h6 {
           justify-content: center;
 }
 
+.range__info p {
+  font-size: 1.8rem;
+}
+
 .range__info--btn {
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
-.header__hero > *, .header__logo, .header__btn, .range__list, .range .item1, .range__header, .range__info {
+.header__hero > *, .header__logo, .header__btn {
   background: rgba(223, 211, 195, 0.7);
+}
+
+.range__list, .range__header, .range__info {
+  background: rgba(155, 130, 129, 0.7);
 }
 
 .btn--header, .menu ul a {
