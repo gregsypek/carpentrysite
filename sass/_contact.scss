@@ -1,0 +1,41 @@
+.contact {
+    display: grid;
+    margin-top: 5rem;
+    grid-template-columns: 2fr repeat(8, minmax(min-content, 10rem)) 2fr;
+    grid-template-rows: 2fr repeat(8, minmax(min-content, 3rem)) 2fr;
+    grid-gap: 2rem;
+
+
+
+    &__header {
+        grid-column: 3/6;
+        grid-row: 2/3;
+        @extend %color-light-transparent;
+        align-self: center;
+        // padding: 5rem;
+        // height: 5rem;
+    }
+
+    &__photo {
+        grid-column: 5/9;
+        grid-row: 2/9;
+        width: 60%;
+        // height: 50rem;
+        overflow: hidden;
+    }
+
+    &__adress {
+        grid-column: 2/4;
+        grid-row: 5/6;
+    }
+
+    &__phone {
+        grid-column: 2/4;
+        grid-row: 7/9;
+    }
+
+    &__button {
+        grid-column: 2/-2;
+        grid-row: 3/4;
+    }
+}
