@@ -1,41 +1,95 @@
 .contact {
     display: grid;
-    margin-top: 5rem;
-    grid-template-columns: 2fr repeat(8, minmax(min-content, 10rem)) 2fr;
-    grid-template-rows: 2fr repeat(8, minmax(min-content, 3rem)) 2fr;
+    // position: relative;
     grid-gap: 2rem;
-
-
+    min-width: 70vw;
+    margin: 0 auto;
+    grid-template-areas: "header ."
+        ". photo"
+        "adress photo"
+        "phone photo"
+        ". photo"
+        ".  button";
 
     &__header {
-        grid-column: 3/6;
-        grid-row: 2/3;
+        grid-area: header;
         @extend %color-light-transparent;
-        align-self: center;
-        // padding: 5rem;
-        // height: 5rem;
+        font-size: 5rem;
+        padding: 1.5rem;
+        // position: absolute;
+        // top: 4rem;
+        // left: 4rem;
+        z-index: 10;
     }
 
     &__photo {
-        grid-column: 5/9;
-        grid-row: 2/9;
-        width: 60%;
-        // height: 50rem;
-        overflow: hidden;
+        grid-area: photo;
+        padding: 2rem;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__adress {
-        grid-column: 2/4;
-        grid-row: 5/6;
+        grid-area: adress;
+        font-size: 1.8rem;
+        align-self: center;
+        padding: 2rem;
+        @extend %color-light-transparent;
     }
 
     &__phone {
-        grid-column: 2/4;
-        grid-row: 7/9;
+        grid-area: phone;
+        font-size: 1.8rem;
+        align-self: center;
+        padding: 2rem;
+        @extend %color-light-transparent;
     }
 
     &__button {
-        grid-column: 2/-2;
-        grid-row: 3/4;
+        grid-area: button;
     }
 }
+
+// .contact {
+//     display: grid;
+//     margin-top: 5rem;
+//     grid-template-columns: 2fr repeat(8, minmax(min-content, 10rem)) 2fr;
+//     grid-template-rows: 2fr repeat(8, minmax(min-content, 3rem)) 2fr;
+//     grid-gap: 2rem;
+
+
+
+//     &__header {
+//         grid-column: 3/6;
+//         grid-row: 2/3;
+//         @extend %color-light-transparent;
+//         align-self: center;
+//         // padding: 5rem;
+//         // height: 5rem;
+//     }
+
+//     &__photo {
+//         grid-column: 5/9;
+//         grid-row: 2/9;
+//         width: 60%;
+//         // height: 50rem;
+//         overflow: hidden;
+//     }
+
+//     &__adress {
+//         grid-column: 2/4;
+//         grid-row: 5/6;
+//     }
+
+//     &__phone {
+//         grid-column: 2/4;
+//         grid-row: 7/9;
+//     }
+
+//     &__button {
+//         grid-column: 2/-2;
+//         grid-row: 3/4;
+//     }
+// }

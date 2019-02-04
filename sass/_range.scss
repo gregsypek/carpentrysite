@@ -5,15 +5,11 @@
     align-content: center;
     margin-top: 5rem;
     grid-template-columns: 1fr 3fr;
-    grid-column: 2/-1;
-    grid-row: 1/-1;
-    // padding: 2rem;
 
     &__hero {
         grid-row: 1/-1;
         grid-column: 1/2;
 
-        // @extend %color-dark-transparent;
         img {
             width: 100%;
         }
@@ -44,7 +40,6 @@
             display: block;
             font-size: 2rem;
             color: inherit;
-            // margin: 0;
             border-bottom: .5rem solid $color-light-2;
         }
     }
@@ -56,10 +51,9 @@
         margin: 0;
 
         &--icon {
-            // margin-left: 5rem;
             fill: $color-light-2;
-            width: 4rem;
-            height: 4rem;
+            width: 6rem;
+            height: 6rem;
             padding: .5rem;
         }
     }
