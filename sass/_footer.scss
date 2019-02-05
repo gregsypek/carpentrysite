@@ -1,0 +1,10 @@
+footer {
+    background: $color-black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $color-light-1;
+    font-size: 1.5rem;
+
+    @extend %a--svg;
+}

@@ -185,6 +185,20 @@ h6 {
   font-size: 1.8rem;
 }
 
+footer {
+  background: #272727;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F0ECE2;
+  font-size: 1.5rem;
+}
+
 .gallery {
   display: -ms-grid;
   display: grid;
@@ -377,14 +391,6 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
-}
-
-.range__phone--icon {
-  fill: #DFD3C3;
-  width: 6rem;
-  height: 6rem;
-  padding: .5rem;
 }
 
 .contact__header, .contact__adress, .contact__phone, .header__hero > *, .header__logo, .header__btn {
@@ -426,5 +432,21 @@ h6 {
 .btn--map {
   -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
           box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+footer a.svg, .range__phone a.svg {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+footer a.svg:after, .range__phone a.svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 /*# sourceMappingURL=main.css.map */

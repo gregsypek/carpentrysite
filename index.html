@@ -96,7 +96,7 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <h2>Moje przykładowe prace</h2>
             <img src="img/1-min.jpg" alt="photo-1">
             <img src="img/2-min.jpg" alt="photo-2">
@@ -136,14 +136,15 @@
                 </ul>
                 <div class="range__phone">
                     <p>Jeżeli szukasz czegoś spoza listy zadzwoń a ja chętnie pomogę. </p>
-                    <svg class="range__phone--icon">
-                        <use xlink:href="img/sprite.svg#icon-heart"></use>
-                    </svg>
+                    <a href="#contact" class="range__phone--icon svg">
+                        <object data="img/SVG-IN-COLOR/phone-hang-up.svg" type="image/svg+xml">
+                        </object>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact__header">
                 <h2>Dane kontaktowe</h2>
             </div>
@@ -163,11 +164,25 @@
                 <a href="#" class="btn btn--map">Mapa</a>
             </div>
         </section>
+        <footer class="footer">
+            <p class="copyright">Copyright &copy; 2019 GRZEGORZ SYPEK</p>
+            <div class="footer__nav">
 
+                <a href="#" class="svg">
+                    <object data="img/SVG-IN-COLOR/facebook2.svg" type="image/svg+xml">
+                    </object>
+                </a>
+                <a href="#gallery" class="svg">
+                    <object data="img/SVG-IN-COLOR/images.svg" type="image/svg+xml">
+                    </object>
+                </a>
+                <a href="#" class="svg">
+                    <object data="img/SVG-IN-COLOR/home3.svg" type="image/svg+xml">
+                    </object>
+                </a>
+            </div>
+        </footer>
     </div>
-
-
-
 </body>
 
 </html>
