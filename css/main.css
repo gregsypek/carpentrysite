@@ -326,10 +326,15 @@ footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  height: 100%;
+  background-position: bottom;
 }
 
 .range__hero img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .range__header {
