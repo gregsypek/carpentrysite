@@ -18,20 +18,18 @@
         font-size: 2.5rem;
         padding: .5rem;
         margin-top: 5rem;
-        // position: absolute;
-        // top: 9rem;
-        // right: -4rem;
-        // z-index: 10;
-        // width: 40rem;
         text-align: center;
     }
 
     &__photo {
+
         grid-area: photo;
-        // padding: 1rem;
+        max-height: 60rem;
+        text-align: center;
+
 
         img {
-            width: 100%;
+            height: 100%;
         }
     }
 
@@ -55,38 +53,9 @@
     &__button {
         grid-area: button;
 
-
-
         a {
-            //caly kod ponizej do  a powinien byc ostylowany jako przycisk btn
             display: block;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: .2em;
-            line-height: 1.5em;
-            background: #272727;
-            color: #F0ECE2;
-            border: none;
-            font-size: 2rem;
-            font-weight: 700;
-            line-height: 1em;
-            outline: none;
-            padding: 1rem 2rem;
-            max-width: 25rem;
-            width: 100%;
-            cursor: pointer;
-            line-height: 1.5em;
-            text-align: center;
-            text-decoration: none;
-
-            &:hover {
-                background: #F0ECE2;
-                color: #272727;
-                cursor: pointer;
-            }
-
+            @extend %btn;
         }
-
-
     }
 }
