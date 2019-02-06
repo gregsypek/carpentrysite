@@ -1,12 +1,10 @@
 .contact {
     display: grid;
-
-    // position: relative;
-    grid-gap: 4rem;
-    max-width: 65vw;
-    margin: 0 auto;
-    grid-template-areas: "header header"
-
+    grid-gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas:
+        "header header"
         "adress photo"
         "phone photo"
         "button photo";
@@ -14,11 +12,13 @@
 
     &__header {
         grid-area: header;
+
         @extend %color-light-transparent;
-        font-size: 2.5rem;
-        padding: .5rem;
-        margin-top: 5rem;
-        text-align: center;
+        @extend %header-title;
+
+        title {
+            font-size: 4.5rem;
+        }
     }
 
     &__photo {
@@ -26,7 +26,6 @@
         grid-area: photo;
         max-height: 60rem;
         text-align: center;
-
 
         img {
             height: 100%;
@@ -39,6 +38,7 @@
         align-self: end;
         padding: 1rem;
         margin: 0;
+        text-align: right;
         @extend %color-light-transparent;
     }
 
@@ -47,6 +47,7 @@
         font-size: 1.8rem;
         align-self: center;
         padding: 2rem;
+        text-align: right;
         @extend %color-light-transparent;
     }
 

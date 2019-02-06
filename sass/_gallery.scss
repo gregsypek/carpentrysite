@@ -4,11 +4,12 @@
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 
     h2 {
-        grid-column: 1/-1;
-
+        width: 80rem;
+        margin: 0 auto;
         justify-self: center;
-        font-size: 3rem;
-        padding: 5rem;
+        grid-column: 1/-1;
+        @extend %header-title;
+        @extend %color-light-transparent;
     }
 
     img {
