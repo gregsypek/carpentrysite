@@ -29,6 +29,9 @@
 
         img {
             height: 100%;
+            // width: 100%;
+            object-fit: cover;
+            overflow: hidden;
         }
     }
 
@@ -49,6 +52,13 @@
         padding: 2rem;
         text-align: right;
         @extend %color-light-transparent;
+
+        a {
+            display: block;
+            color: inherit;
+            padding: 2rem;
+
+        }
     }
 
     &__button {

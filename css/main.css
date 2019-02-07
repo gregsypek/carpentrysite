@@ -75,6 +75,9 @@ h6 {
 
 .contact__photo img {
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
 }
 
 .contact__adress {
@@ -100,6 +103,12 @@ h6 {
       align-self: center;
   padding: 2rem;
   text-align: right;
+}
+
+.contact__phone a {
+  display: block;
+  color: inherit;
+  padding: 2rem;
 }
 
 .contact__button {
@@ -361,13 +370,33 @@ footer {
   font-weight: 700;
   list-style: none;
   text-decoration: none;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .range__list a {
   display: block;
   font-size: 2rem;
   color: inherit;
+  position: relative;
   border-bottom: 0.5rem solid #DFD3C3;
+}
+
+.range__list a:hover {
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+  width: calc(100% - 4rem);
+}
+
+.range__list a:hover::after {
+  content: "";
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  width: 100%;
+  border-top: 0.5rem solid #DFD3C3;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
 }
 
 .range__phone {
@@ -379,6 +408,42 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.range__phone img {
+  height: 3rem;
+}
+
+.range__phone img:hover {
+  -webkit-animation: rotate .1s linear infinite alternate;
+          animation: rotate .1s linear infinite alternate;
+}
+
+.range__phone img:active {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
 }
 
 .contact__header, .contact__adress, .contact__phone, .gallery h2, .header__hero > *, .header__logo, .header__btn {
@@ -422,14 +487,14 @@ footer {
           box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
 }
 
-footer a.svg, .range__phone a.svg {
+footer a.svg {
   position: relative;
   display: inline-block;
   padding: 1rem;
   margin: 2rem;
 }
 
-footer a.svg:after, .range__phone a.svg:after {
+footer a.svg:after {
   content: "";
   position: absolute;
   top: 0;
