@@ -14,6 +14,13 @@ $color-dark-2:#596e79;
 $font-primary: 'Roboto',
 sans-serif;
 
+// RESPONSIVE  BREAKPOINTS
+
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+
+
+
 :root {
     --black: #272727;
 }
@@ -26,7 +33,13 @@ html {
     font-weight: 400;
     font-size: 62.5%; //10px
     color: var(--black);
+    max-width: 1200px;
+    margin: 0 auto;
     // text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 55%;
+    }
 }
 
 *,
@@ -38,11 +51,15 @@ html {
 body {
     background-image: url("../img/topography.svg"),
         linear-gradient(110deg, $color-light-2, $color-dark-1);
-    background-size: 340px, auto;
+    // background-size: 340px, auto;
     min-height: calc(100vh - 100px);
     margin: 50px;
+
     /* background-attachment: fixed; */
 }
+
+
+
 
 h1,
 h2,

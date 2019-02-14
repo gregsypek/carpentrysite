@@ -41,30 +41,28 @@
         font-weight: 700;
         list-style: none;
         text-decoration: none;
-        transition: all .2s ease;
+        transition: all .1s ease;
+
+
+        display: grid;
+
+        li {
+            border-bottom: .5rem solid $color-light-2;
+        }
+
 
         a {
             display: block;
             font-size: 2rem;
             color: inherit;
-            position: relative;
-            border-bottom: .5rem solid $color-light-2;
 
             &:hover {
                 transform: translateX(2rem);
-                width: calc(100% - 4rem);
+
+
             }
         }
 
-        a:hover::after {
-            content: "";
-            transform: translateX(0);
-            width: 100%;
-            border-top: .5rem solid $color-light-2;
-            position: absolute;
-            bottom: -0.5rem;
-            left: 0;
-        }
     }
 
     &__phone {
@@ -75,7 +73,7 @@
         // @extend %a--svg;
         img {
             // display: block;
-            height: 3rem;
+            height: 4rem;
 
             // transform-origin: 
 
@@ -84,7 +82,9 @@
 
         img:hover {
             animation: rotate .1s linear infinite alternate;
+
         }
+
 
         img:active {
             animation-play-state: paused;
