@@ -72,7 +72,6 @@
 .menu {
     display: grid;
 
-
     ul {
         display: grid;
 
@@ -98,29 +97,35 @@
     }
 
     &__burger {
+        display: none;
+        height: 100%;
+
+        @media only screen and (max-width: $bp-large) {
+            display: block;
+        }
 
 
         &-nav {
             display: grid;
-
             justify-items: center;
-            padding: 1rem;
+            padding: 10px;
             position: fixed;
+            overflow: hidden;
             left: 0;
             width: 100%;
-            top: -20vw;
-            height: 20vw;
-            min-height: 200px;
-            background-color: $color-light-2;
+            top: -300px;
+            height: 300px;
+            // min-height: 40vh;
+            background-color: $color-black;
             transition: .3s linear;
             text-transform: uppercase;
 
             li {
-
-                align-self: center;
+                // align-self: center;
                 letter-spacing: .8rem;
                 font-weight: 700;
                 list-style: none;
+                height: 50px;
                 width: 50%;
                 border-bottom: .5rem solid $color-brown-2;
             }
@@ -129,14 +134,15 @@
             a {
                 display: block;
                 text-align: center;
-                line-height: 5.5rem;
+                height: 50px;
+                line-height: 100%;
                 font-size: 2.5rem;
-                color: inherit;
+                color: $color-light-2;
                 text-decoration: none;
             }
 
             &.on {
-                top: 0vw;
+                top: 0;
             }
         }
 
@@ -145,18 +151,25 @@
             cursor: pointer;
             font-size: 6rem;
             line-height: 6rem;
-
             top: 25px;
             right: 60px;
             transition: .3s linear;
 
             .fas {
                 display: none;
-                color: $color-black;
             }
 
             i.on {
                 display: block;
+
+            }
+
+            .fa-bars {
+                color: $color-black;
+            }
+
+            .fa-times {
+                color: $color-light-2;
             }
         }
 
