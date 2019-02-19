@@ -5,6 +5,45 @@ footer {
     align-items: center;
     color: $color-light-1;
     font-size: 1.3rem;
-
     @extend %a--svg;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-wrap: wrap;
+        padding: .5rem;
+        margin: 1rem;
+
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        span {
+            display: block;
+        }
+
+        p {
+            padding: .5rem;
+
+        }
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+
+        p {
+            flex-wrap: wrap;
+            order: 2;
+
+        }
+
+        span {
+            display: inline-block;
+        }
+    }
+
+
+
+
+
+
 }

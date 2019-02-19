@@ -5,17 +5,36 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif, sans-serif;
   font-weight: 400;
   font-size: 62.5%;
   color: var(--black);
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 @media only screen and (max-width: 75em) {
   html {
-    font-size: 55%;
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 56%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@media only screen and (max-width: 27.5em) {
+  html {
+    font-size: 50%;
   }
 }
 
@@ -28,9 +47,28 @@ html {
 
 body {
   background-image: url("../img/topography.svg"), linear-gradient(110deg, #DFD3C3, #c7b198);
+  background-size: 540px, auto;
   min-height: calc(100vh - 100px);
   margin: 50px;
-  /* background-attachment: fixed; */
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 50em) {
+  body {
+    margin: 40px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  body {
+    margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 27.5em) {
+  body {
+    margin: 10px;
+  }
 }
 
 h1,
@@ -57,7 +95,15 @@ h6 {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  width: 80vw;
+  margin: 0 auto;
       grid-template-areas: "header header" "adress photo" "phone photo" "button photo";
+}
+
+@media only screen and (max-width: 37.5em) {
+  .contact {
+        grid-template-areas: "header header" "adress button" "photo photo " "phone phone";
+  }
 }
 
 .contact__header {
@@ -65,6 +111,7 @@ h6 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: header;
+  width: 100%;
 }
 
 .contact__header title {
@@ -76,15 +123,18 @@ h6 {
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   grid-area: photo;
-  max-height: 60rem;
-  text-align: center;
 }
 
 .contact__photo img {
-  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+  .contact__photo img {
+    max-height: 80rem;
+  }
 }
 
 .contact__adress {
@@ -97,7 +147,7 @@ h6 {
       align-self: end;
   padding: 1rem;
   margin: 0;
-  text-align: right;
+  text-align: left;
 }
 
 .contact__phone {
@@ -109,7 +159,7 @@ h6 {
       -ms-grid-row-align: center;
       align-self: center;
   padding: 2rem;
-  text-align: right;
+  text-align: left;
 }
 
 .contact__phone a {
@@ -118,10 +168,26 @@ h6 {
   padding: 2rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .contact__phone a {
+    padding: 1rem;
+  }
+}
+
 .contact__button {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: button;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+@media only screen and (max-width: 50em) {
+  .contact__button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .contact__button a {
@@ -142,6 +208,13 @@ h6 {
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 
+@media only screen and (max-width: 50em) {
+  .features {
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}
+
 .features__header {
   display: -ms-grid;
   display: grid;
@@ -155,7 +228,19 @@ h6 {
 }
 
 .features__header h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .features__header h2 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .features__header h2 {
+    font-size: 2.5rem;
+  }
 }
 
 .features__header p {
@@ -199,6 +284,46 @@ footer {
   font-size: 1.3rem;
 }
 
+@media only screen and (max-width: 50em) {
+  footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: .5rem;
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  footer span {
+    display: block;
+  }
+  footer p {
+    padding: .5rem;
+  }
+}
+
+@media only screen and (max-width: 27.5em) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  footer p {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  footer span {
+    display: inline-block;
+  }
+}
+
 .gallery {
   display: -ms-grid;
   display: grid;
@@ -208,7 +333,7 @@ footer {
 }
 
 .gallery h2 {
-  width: 80rem;
+  width: 100%;
   margin: 0 auto;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -226,15 +351,21 @@ footer {
       grid-template-areas: "logo hero hero" "btn hero hero";
 }
 
+@media only screen and (max-width: 50em) {
+  .header {
+        grid-template-areas: "hero hero" "logo btn";
+  }
+}
+
 .header__hero {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: hero;
-  min-height: 60rem;
+  height: 50rem;
   width: 100%;
-  background: white url(../img/header_back2.jpg);
+  background: white url(../img/header_back-2-large.png);
   background-size: cover;
   background-position: bottom right;
   padding: 5rem;
@@ -259,10 +390,28 @@ footer {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 50em) {
+  .header__hero h1 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header__hero h1 {
+    font-size: 3rem;
+  }
+}
+
 .header__hero p {
   font-size: 3rem;
   font-weight: 400;
   letter-spacing: .2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header__hero p {
+    font-size: 2rem;
+  }
 }
 
 .header__hero > * {
@@ -306,22 +455,29 @@ footer {
       align-content: center;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .header__btn {
+    width: 70%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 .menu {
-  display: -ms-grid;
-  display: grid;
+  margin-bottom: 4rem;
 }
 
-.menu ul {
+.menu__list {
   display: -ms-grid;
   display: grid;
-  grid-gap: 1rem;
-  padding: 0;
+  grid-gap: 2rem;
+  margin: 0;
   list-style: none;
-  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
-.menu ul a {
+.menu__list a {
   display: block;
   margin: 0 auto;
   text-decoration: none;
@@ -331,7 +487,7 @@ footer {
 }
 
 @media only screen and (max-width: 62.5em) {
-  .menu ul a {
+  .menu__list a {
     display: none;
   }
 }
@@ -365,6 +521,9 @@ footer {
 }
 
 .menu__burger-nav li {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   letter-spacing: .8rem;
   font-weight: 700;
   list-style: none;
@@ -390,16 +549,17 @@ footer {
 .menu__burger-icons {
   position: fixed;
   cursor: pointer;
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 6rem;
-  top: 25px;
-  right: 60px;
+  top: 15px;
+  right: 8px;
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }
 
 .menu__burger-icons .fas {
   display: none;
+  padding: 3px 6px;
 }
 
 .menu__burger-icons i.on {
@@ -408,6 +568,7 @@ footer {
 
 .menu__burger-icons .fa-bars {
   color: #272727;
+  background: rgba(223, 211, 195, 0.7);
 }
 
 .menu__burger-icons .fa-times {
@@ -429,6 +590,9 @@ footer {
 
 .range__hero {
   grid-row: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -443,8 +607,20 @@ footer {
      object-fit: cover;
 }
 
+@media only screen and (max-width: 50em) {
+  .range__hero img {
+    display: none;
+  }
+}
+
 .range__header {
   padding: 2rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .range__header {
+    grid-column: 1/-1;
+  }
 }
 
 .range__header h2 {
@@ -538,7 +714,7 @@ footer {
   background: rgba(155, 130, 129, 0.7);
 }
 
-.contact__button a, .btn--header, .menu ul a {
+.contact__button a, .btn--header, .menu__list a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .2em;
@@ -559,7 +735,7 @@ footer {
   text-decoration: none;
 }
 
-.contact__button a:hover, .btn--header:hover, .menu ul a:hover {
+.contact__button a:hover, .btn--header:hover, .menu__list a:hover {
   background: #F0ECE2;
   color: #272727;
   cursor: pointer;

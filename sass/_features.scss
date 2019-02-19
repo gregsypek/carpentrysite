@@ -1,12 +1,14 @@
 .features {
     display: grid;
-
     grid-gap: 2rem;
     margin-top: 4rem;
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
 
     &__header {
         display: grid;
@@ -16,14 +18,20 @@
         padding: 5rem;
         background: rgba(155, 130, 129, .7);
 
-        // align-self: center;
         h2 {
-            font-size: 4rem;
+            font-size: 3.5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 3rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 2.5rem;
+            }
         }
 
         p {
             font-size: 2rem;
-            // grid-column: 2 /-2;
         }
     }
 }
@@ -37,10 +45,8 @@
 
     &__icon {
         fill: $color-light-2;
-        // justify-items: center;
         width: 7rem;
         height: 7rem;
-
     }
 
     h3 {

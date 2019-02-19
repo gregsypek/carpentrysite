@@ -19,6 +19,8 @@ sans-serif;
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px
+$bp-small: 37.5em; //600px
+$bp-smallest: 27.5em //440px
 
 
 
@@ -30,16 +32,28 @@ $bp-medium: 50em; // 800px
 html {
 
     box-sizing: border-box;
-    font-family: $font-primary;
+    font-family: $font-primary, sans-serif;
     font-weight: 400;
     font-size: 62.5%; //10px
     color: var(--black);
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    // text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
 
     @media only screen and (max-width: $bp-largest) {
-        font-size: 55%;
+        font-size: 60%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 56%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 52%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 50%;
     }
 }
 
@@ -52,15 +66,24 @@ html {
 body {
     background-image: url("../img/topography.svg"),
         linear-gradient(110deg, $color-light-2, $color-dark-1);
-    // background-size: 340px, auto;
+    background-size: 540px, auto;
     min-height: calc(100vh - 100px);
     margin: 50px;
+    overflow-x: hidden;
 
-    /* background-attachment: fixed; */
+    @media only screen and (max-width: $bp-medium) {
+        margin: 40px;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 20px;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        margin: 10px;
+    }
+
 }
-
-
-
 
 h1,
 h2,

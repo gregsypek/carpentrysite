@@ -3,14 +3,26 @@
     grid-gap: 2rem;
     justify-content: center;
     align-content: center;
+    width: 80vw;
+    margin: 0 auto;
     grid-template-areas:
         "header header"
         "adress photo"
         "phone photo"
         "button photo";
 
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-areas:
+            "header header"
+            "adress button"
+            "photo photo "
+            "phone phone";
+    }
+
     &__header {
         grid-area: header;
+        width: 100%;
 
         @extend %color-light-transparent;
         @extend %header-title;
@@ -21,16 +33,16 @@
     }
 
     &__photo {
-
         grid-area: photo;
-        max-height: 60rem;
-        text-align: center;
 
         img {
-            height: 100%;
-            // width: 100%;
+            width: 100%;
             object-fit: cover;
-            overflow: hidden;
+
+            @media only screen and (max-width: $bp-largest) {
+                max-height: 80rem;
+
+            }
         }
     }
 
@@ -40,7 +52,7 @@
         align-self: end;
         padding: 1rem;
         margin: 0;
-        text-align: right;
+        text-align: left;
         @extend %color-light-transparent;
     }
 
@@ -49,7 +61,7 @@
         font-size: 1.8rem;
         align-self: center;
         padding: 2rem;
-        text-align: right;
+        text-align: left;
         @extend %color-light-transparent;
 
         a {
@@ -57,11 +69,20 @@
             color: inherit;
             padding: 2rem;
 
+            @media only screen and (max-width: $bp-small) {
+                padding: 1rem;
+            }
+
         }
     }
 
     &__button {
         grid-area: button;
+        justify-self: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            align-self: center;
+        }
 
         a {
             display: block;
