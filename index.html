@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
+    <link href="dist/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -25,16 +26,16 @@
             <div class="menu__burger">
                 <div class="menu__burger-nav">
                     <li>
-                        <a href="#">O mnie</a>
+                        <a href="#features">O mnie</a>
                     </li>
                     <li>
-                        <a href="#">Zdjęcia</a>
+                        <a href="#gallery">Zdjęcia</a>
                     </li>
                     <li>
-                        <a href="#">Oferta</a>
+                        <a href="#range">Oferta</a>
                     </li>
                     <li>
-                        <a href="#">Kontakt</a>
+                        <a href="#contact">Kontakt</a>
                     </li>
                 </div>
                 <div class="menu__burger-icons">
@@ -45,16 +46,16 @@
 
             <ul class="menu__list">
                 <li>
-                    <a href="#">O mnie</a>
+                    <a href="#features">O mnie</a>
                 </li>
                 <li>
-                    <a href="#">Zdjęcia</a>
+                    <a href="#gallery">Zdjęcia</a>
                 </li>
                 <li>
-                    <a href="#">Oferta</a>
+                    <a href="#range">Oferta</a>
                 </li>
                 <li>
-                    <a href="#">Kontakt</a>
+                    <a href="#contact">Kontakt</a>
                 </li>
 
             </ul>
@@ -120,17 +121,26 @@
 
         <section class="gallery mt-lg" id="gallery">
             <h2>Moje przykładowe prace</h2>
-            <img src="img/1-min.jpg" alt="photo-1">
-            <img src="img/2-min.jpg" alt="photo-2">
-            <img src="img/3-min.jpg" alt="photo-3">
-            <img src="img/4-min.jpg" alt="photo-4">
-            <img src="img/5-min.jpg" alt="photo-5">
-            <img src="img/6-min.jpg" alt="photo-6">
-            <img src="img/7-min.jpg" alt="photo-7">
-            <img src="img/8-min.jpg" alt="photo-8">
-            <img src="img/2-min.jpg" alt="photo-9">
+            <a href="img/1-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/1-min.jpg"
+                    alt="photo-1"></a>
+            <a href="img/2-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/2-min.jpg"
+                    alt="photo-2"></a>
+            <a href="img/3-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/3-min.jpg"
+                    alt="photo-3"></a>
+            <a href="img/4-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/4-min.jpg"
+                    alt="photo-4"></a>
+            <a href="img/5-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/5-min.jpg"
+                    alt="photo-5"></a>
+            <a href="img/6-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/6-min.jpg"
+                    alt="photo-6"></a>
+            <a href="img/7-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/7-min.jpg"
+                    alt="photo-7"></a>
+            <a href="img/8-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/8-min.jpg"
+                    alt="photo-8"></a>
+            <a href="img/6-min.jpg" data-lightbox="my work" data-title="Zdjęcia moich prac"><img src="img/6-min.jpg"
+                    alt="photo-9"></a>
         </section>
-        <section class="range mt-lg">
+        <section class="range mt-lg" id="range">
             <div class="range__hero">
                 <img src="img/wood-1-large.png" alt="photo-wood">
             </div>
@@ -171,9 +181,9 @@
                 <h3>Dane kontaktowe</h3>
             </div>
             <div class="contact__photo">
-
-                <img srcset="img/wood-4.png 1200w, img/wood-3.png 1000w, img/wood-2b.png 800w, img/wood.png 600w" alt="contact__photo"
-                    class="wood" src="img/wood-3.png">
+                <!-- img/wood-4.png 1200w, -->
+                <img srcset="img/wood-3.png 1000w, img/wood-2b.png 800w, img/wood.png 600w" alt="contact__photo" class="wood"
+                    src="img/wood-3.png">
             </div>
 
             <div class="contact__adress">
@@ -216,6 +226,12 @@
             </div>
         </footer>
     </div>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        lightbox.option({
+            albumLabel: "Zdjęcie %1 z %2"
+        })
+    </script>
     <script src="app.js"></script>
 </body>
 

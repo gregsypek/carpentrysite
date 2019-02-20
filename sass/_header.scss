@@ -1,6 +1,7 @@
 .header {
     display: grid;
     grid-gap: 2rem;
+    // height: 100vh;
 
     grid-template-areas:
         "logo hero hero"
@@ -12,9 +13,13 @@
             "logo btn";
     }
 
+    // @media only screen and (max-width: $bp-large) {
+    //     grid-row: 1/3;
+    // }
+
     &__hero {
         grid-area: hero;
-        height: 50rem;
+        height: 55rem;
         width: 100%;
         background: white url(../img/header_back-2-large.png);
         background-size: cover;
@@ -108,6 +113,10 @@
         list-style: none;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
+        @media only screen and (max-width: $bp-large) {
+            height: 0;
+        }
+
         a {
             @extend %btn;
             display: block;
@@ -120,6 +129,7 @@
             @media only screen and (max-width: $bp-large) {
                 display: none;
             }
+
         }
     }
 

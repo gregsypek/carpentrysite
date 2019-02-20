@@ -127,14 +127,10 @@ h6 {
 
 .contact__photo img {
   width: 100%;
+  max-height: 800px;
+  max-width: 600px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-@media only screen and (max-width: 75em) {
-  .contact__photo img {
-    max-height: 80rem;
-  }
 }
 
 .contact__adress {
@@ -363,7 +359,7 @@ footer {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: hero;
-  height: 50rem;
+  height: 55rem;
   width: 100%;
   background: white url(../img/header_back-2-large.png);
   background-size: cover;
@@ -475,6 +471,12 @@ footer {
   list-style: none;
   -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+@media only screen and (max-width: 62.5em) {
+  .menu__list {
+    height: 0;
+  }
 }
 
 .menu__list a {
