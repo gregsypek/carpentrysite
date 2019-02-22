@@ -20,6 +20,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 58%;
+  }
+}
+
 @media only screen and (max-width: 50em) {
   html {
     font-size: 56%;
@@ -50,7 +56,6 @@ body {
   background-size: 540px, auto;
   min-height: calc(100vh - 100px);
   margin: 50px;
-  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 50em) {
@@ -127,7 +132,6 @@ h6 {
 
 .contact__photo img {
   width: 100%;
-  max-height: 800px;
   max-width: 600px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -253,9 +257,8 @@ h6 {
 }
 
 .feature__icon {
-  fill: #DFD3C3;
-  width: 7rem;
-  height: 7rem;
+  color: #DFD3C3;
+  font-size: 7rem;
 }
 
 .feature h3 {
@@ -497,6 +500,7 @@ footer {
 .menu__burger {
   display: none;
   height: 100%;
+  padding: 0;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -515,7 +519,6 @@ footer {
   left: 0;
   width: 100%;
   top: -300px;
-  height: 300px;
   background-color: #272727;
   -webkit-transition: .3s linear;
   transition: .3s linear;
@@ -529,7 +532,6 @@ footer {
   letter-spacing: .8rem;
   font-weight: 700;
   list-style: none;
-  height: 50px;
   width: 50%;
   border-bottom: 0.5rem solid #9B8281;
 }
@@ -537,7 +539,7 @@ footer {
 .menu__burger-nav a {
   display: block;
   text-align: center;
-  height: 50px;
+  padding: 2rem;
   line-height: 100%;
   font-size: 2.5rem;
   color: #DFD3C3;
@@ -546,6 +548,7 @@ footer {
 
 .menu__burger-nav.on {
   top: 0;
+  margin: 0;
 }
 
 .menu__burger-icons {
