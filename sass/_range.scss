@@ -48,7 +48,7 @@
         font-weight: 700;
         list-style: none;
         text-decoration: none;
-        transition: all .1s ease;
+        
         display: grid;
 
         li {
@@ -59,13 +59,16 @@
             display: block;
             font-size: 2rem;
             color: inherit;
+            will-change: transform;
+            transition: transform .1s ease-out;
 
             &:hover {
-                transform: translateX(2rem);
+                transform: translateX(3rem);
+                // cursor: pointer;
             }
         }
 
-    }
+    }   
 
     &__phone {
         display: flex;

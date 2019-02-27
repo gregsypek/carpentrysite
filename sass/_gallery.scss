@@ -10,10 +10,12 @@
         grid-column: 1/-1;
         @extend %header-title;
         @extend %color-light-transparent;
-    }
+    }  
 
     img {
         width: 100%;
+        position: relative;
+        z-index: -1;
     }
 
 }

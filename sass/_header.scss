@@ -127,6 +127,7 @@
             text-align: center;
             text-transform: uppercase;
             font-size: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.5) 1rem 1rem 1rem;
 
             @media only screen and (max-width: $bp-large) {
                 display: none;
@@ -155,7 +156,8 @@
             top: -300px;
             // height: 300px;
             background-color: $color-black;
-            transition: .3s linear;
+            transition: all .3s linear;
+           
             text-transform: uppercase;
 
             li {
@@ -192,9 +194,8 @@
             font-size: 5rem;
             line-height: 6rem;
             top: 15px;
-
             right: 8px;
-            transition: .3s linear;
+            transition: all .3s linear;
 
             .fas {
                 display: none;
@@ -213,6 +214,7 @@
 
             .fa-times {
                 color: $color-light-2;
+                z-index: 2;
 
             }
         }
