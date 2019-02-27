@@ -10,12 +10,32 @@
         grid-column: 1/-1;
         @extend %header-title;
         @extend %color-light-transparent;
-    }  
-
+    }   
     img {
-        width: 100%;
+        width: 100%;        
+        z-index: -1;     
+    }
+
+    a {
         position: relative;
-        z-index: -1;
+        overflow: hidden;
+    }
+    a::after {
+        content: url('/img/SVG-IN-COLOR/images.svg');
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);        
+        opacity: 0;   
+       
+        transition: opacity .5s ease-in;
+      
+
+        
+    }
+    a:hover::after {
+        opacity: 1;
+        // transform:translateY(0);
     }
 
 }

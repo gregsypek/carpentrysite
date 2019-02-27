@@ -341,8 +341,28 @@ footer {
 
 .gallery img {
   width: 100%;
-  position: relative;
   z-index: -1;
+}
+
+.gallery a {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery a::after {
+  content: url("/img/SVG-IN-COLOR/images.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+}
+
+.gallery a:hover::after {
+  opacity: 1;
 }
 
 .header {
