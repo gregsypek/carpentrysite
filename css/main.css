@@ -12,6 +12,7 @@ html {
   max-width: 1400px;
   margin: 0 auto;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 75em) {
@@ -329,6 +330,7 @@ footer {
   grid-gap: 20px;
   -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  z-index: 1;
 }
 
 .gallery h2 {
@@ -341,7 +343,6 @@ footer {
 
 .gallery img {
   width: 100%;
-  z-index: -1;
 }
 
 .gallery a {
@@ -350,18 +351,35 @@ footer {
 }
 
 .gallery a::after {
-  content: url("/img/SVG-IN-COLOR/images.svg");
+  content: '+';
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-transition: opacity .5s ease-in;
-  transition: opacity .5s ease-in;
+  font-size: 30rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  color: #F0ECE2;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
 }
 
-.gallery a:hover::after {
+.gallery a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgba(39, 39, 39, 0.6);
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.gallery a:hover::after,
+.gallery a:hover::before {
   opacity: 1;
 }
 
@@ -543,9 +561,10 @@ footer {
   left: 0;
   width: 100%;
   top: -300px;
-  background-color: #272727;
+  background-color: rgba(39, 39, 39, 0.9);
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
+  z-index: 10;
   text-transform: uppercase;
 }
 
@@ -584,6 +603,7 @@ footer {
   right: 8px;
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
+  z-index: 200;
 }
 
 .menu__burger-icons .fas {
@@ -602,7 +622,6 @@ footer {
 
 .menu__burger-icons .fa-times {
   color: #DFD3C3;
-  z-index: 2;
 }
 
 .range {
