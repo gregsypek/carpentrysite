@@ -75,17 +75,19 @@
         justify-content: space-around;
         align-items: center;
 
-        img {
-            height: 4rem;
-        }
+       .fas{
+            font-size:  5rem;
+            color: $color-light-1;
 
-        img:hover {
-            animation: rotate .1s linear infinite alternate;
+            &:hover {
+                animation: rotate .1s linear infinite alternate;
+            }
+    
+         &:active {
+                animation-play-state: paused;
+            }
         }
-
-        img:active {
-            animation-play-state: paused;
-        }
+     
     }
 
     @keyframes rotate {

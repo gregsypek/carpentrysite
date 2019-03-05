@@ -9,10 +9,7 @@ html {
   font-weight: 400;
   font-size: 62.5%;
   color: var(--black);
-  max-width: 1400px;
-  margin: 0 auto;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
-  scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 75em) {
@@ -475,7 +472,7 @@ footer {
 }
 
 .header__logo img {
-  height: 13rem;
+  height: 20rem;
   width: auto;
 }
 
@@ -499,6 +496,13 @@ footer {
     width: 70%;
     -ms-grid-column-align: center;
         justify-self: center;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btn--header {
+    font-size: 1rem;
+    width: 50%;
   }
 }
 
@@ -722,16 +726,17 @@ footer {
           align-items: center;
 }
 
-.range__phone img {
-  height: 4rem;
+.range__phone .fas {
+  font-size: 5rem;
+  color: #F0ECE2;
 }
 
-.range__phone img:hover {
+.range__phone .fas:hover {
   -webkit-animation: rotate .1s linear infinite alternate;
           animation: rotate .1s linear infinite alternate;
 }
 
-.range__phone img:active {
+.range__phone .fas:active {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
