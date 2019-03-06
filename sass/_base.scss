@@ -24,6 +24,7 @@ $bp-smallest: 27.5em //440px
 
 
 
+
 :root {
     --black: #272727;
 }
@@ -71,13 +72,8 @@ html {
 body {
     background-image: url("../img/topography.svg"),
         linear-gradient(110deg, $color-light-2, $color-dark-1);
-    background-size: 540px, auto;
+    background-size: 540px, auto;    
 
-    @supports ( not ((background-image: url("../img/topography.svg"),
-    linear-gradient(110deg, $color-light-2, $color-dark-1)) ){
-       background-color: $color-dark-1;
-     }
-     
     min-height: calc(100vh - 100px);
     margin: 5rem;
 

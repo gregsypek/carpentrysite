@@ -1,6 +1,7 @@
 .header {
     display: grid;
     grid-gap: 2rem;
+    min-height: 85vh;
     grid-template-areas:
         "logo hero hero"
         "btn hero hero";
@@ -10,26 +11,40 @@
             "hero hero"
             "logo btn";
     }
+    // @media only screen and (max-width: $bp-smallest) {
+    //     grid-template-areas:
+    //         "hero hero"
+    //         "logo ."
+    //         "btn btn";
+    // }
 
     &__hero {
         grid-area: hero;
-        height: 55rem;
+       max-height: 55rem;
         width: 100%;
         background: white url(../img/header_back-2-large.png);
         background-size: cover;
         background-position: bottom right;
         padding: 5rem;
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
+
         @media only screen and (max-width: $bp-medium) {
             height: 50rem;
         }
-        @media only screen and (max-width: $bp-small) {
-            height: 35rem;
+        @media only screen and (max-width: $bp-medium) {
+            height: 50rem;
         }
-
+        @media only screen and (max-width: $bp-small) {           
+            max-height: 50rem;      
+        }
+        @media only screen and (max-width: $bp-smallest) {                    
+            height: 35rem;          
+           
+        }       
         h1 {
             font-size: 5rem;
             font-weight: 400;
@@ -44,7 +59,8 @@
             }
 
             @media only screen and (max-width: $bp-small) {
-                font-size: 3rem;
+                font-size: 3rem;            
+                
             }
 
         }
@@ -88,7 +104,7 @@
                 height: 14rem;
             }
             @media only screen and (max-width: $bp-smallest) {
-                height: 10rem;
+                height: 12rem;
             }
 
         }
@@ -209,24 +225,27 @@
 
         &-icons {
             position: fixed;
-            right: 4.9rem;
-            @media only screen and (max-width: $bp-medium) {
-                right: 4rem;
-            }
-        
-            @media only screen and (max-width: $bp-small) {
-                right: 2rem;
-            }
-        
-            @media only screen and (max-width: $bp-smallest) {
-                right: 1rem;
-            }
+            right: 4.9rem;            
             cursor: pointer;
            display: grid;
             font-size: 5rem;
             line-height: 6rem;
             transition: all .3s linear;
             z-index: 200;
+            @media only screen and (max-width: $bp-medium) {
+                right: 4rem;
+                font-size: 5.8rem;
+            }
+        
+            @media only screen and (max-width: $bp-small) {
+                right: 2rem;
+                font-size: 5.5rem;
+            }
+        
+            @media only screen and (max-width: $bp-smallest) {
+                right: 1rem;
+               
+            }
 
 
             .fas {

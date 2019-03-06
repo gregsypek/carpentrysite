@@ -412,6 +412,7 @@ footer {
   display: -ms-grid;
   display: grid;
   grid-gap: 2rem;
+  min-height: 85vh;
       grid-template-areas: "logo hero hero" "btn hero hero";
 }
 
@@ -427,12 +428,13 @@ footer {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: hero;
-  height: 55rem;
+  max-height: 55rem;
   width: 100%;
   background: white url(../img/header_back-2-large.png);
   background-size: cover;
   background-position: bottom right;
   padding: 5rem;
+  margin-top: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -454,7 +456,19 @@ footer {
   }
 }
 
+@media only screen and (max-width: 50em) {
+  .header__hero {
+    height: 50rem;
+  }
+}
+
 @media only screen and (max-width: 37.5em) {
+  .header__hero {
+    max-height: 50rem;
+  }
+}
+
+@media only screen and (max-width: 27.5em) {
   .header__hero {
     height: 35rem;
   }
@@ -541,7 +555,7 @@ footer {
 
 @media only screen and (max-width: 27.5em) {
   .header__logo img {
-    height: 10rem;
+    height: 12rem;
   }
 }
 
@@ -701,12 +715,14 @@ footer {
 @media only screen and (max-width: 50em) {
   .menu__burger-icons {
     right: 4rem;
+    font-size: 5.8rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .menu__burger-icons {
     right: 2rem;
+    font-size: 5.5rem;
   }
 }
 
