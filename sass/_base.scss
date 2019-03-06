@@ -59,8 +59,6 @@ html {
     @media only screen and (max-width: $bp-smallest) {
         font-size: 50%; // 1em = 8px
     }
-
-        // scroll-behavior: smooth;
       
 }
 
@@ -74,19 +72,25 @@ body {
     background-image: url("../img/topography.svg"),
         linear-gradient(110deg, $color-light-2, $color-dark-1);
     background-size: 540px, auto;
+
+    @supports ( not ((background-image: url("../img/topography.svg"),
+    linear-gradient(110deg, $color-light-2, $color-dark-1)) ){
+       background-color: $color-dark-1;
+     }
+     
     min-height: calc(100vh - 100px);
-    margin: 50px;
+    margin: 5rem;
 
     @media only screen and (max-width: $bp-medium) {
-        margin: 40px;
+        margin: 4rem;
     }
 
     @media only screen and (max-width: $bp-small) {
-        margin: 20px;
+        margin: 2rem;
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        margin: 10px;
+        margin:1rem;
     }
 
 }

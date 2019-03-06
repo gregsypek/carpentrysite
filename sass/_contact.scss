@@ -5,7 +5,7 @@
     align-content: center;
     width: 80vw;
     margin: 0 auto;
-    grid-template-areas:
+      grid-template-areas:
         "header header"
         "adress photo"
         "phone photo"
@@ -23,13 +23,19 @@
     &__header {
         grid-area: header;
         width: 100%;
+        font-size: 4rem;
+        line-height: 5rem;
+        padding: .5rem;
+        text-align: center;     
 
-        @extend %color-light-transparent;
-        @extend %header-title;
+        @extend %color-light-transparent;    
 
-        title {
-            font-size: 4.5rem;
-        }
+        @media only screen and (max-width: $bp-small) {
+            font-size: 3.5rem;     
+          } 
+          @media only screen and (max-width: $bp-smallest) {
+            font-size: 3rem;     
+          } 
     }
 
     &__photo {
@@ -38,22 +44,9 @@
 
         img {
             width: 100%;
-            // max-height: 800px;
+      
             max-width: 600px;
             object-fit: cover;
-
-            // @media only screen and (max-width: $bp-largest) {
-            //     width: 66em;
-            // }
-
-            // @media only screen and (max-width: $bp-large) {
-            //     width: 57em;
-            // }
-
-            // @media only screen and (max-width: $bp-medium) {
-            //     min-height: 600px;
-            // }
-
 
         }
     }

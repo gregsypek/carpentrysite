@@ -8,9 +8,19 @@
         width: 100%;
         margin: 0 auto;
         justify-self: center;
-        grid-column: 1/-1;
-        @extend %header-title;
+        grid-column: 1/-1;      
+        font-size: 4rem;
+        line-height: 5rem;
+        padding: .5rem;
+        text-align: center;
         @extend %color-light-transparent;
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 3.5rem;     
+        } 
+        @media only screen and (max-width: $bp-smallest) {
+          font-size: 3rem;     
+        } 
     }   
     img {
         width: 100%;        
