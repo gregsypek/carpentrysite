@@ -422,13 +422,19 @@ footer {
   }
 }
 
+@media only screen and (min-width: 800px) and (min-height: 800px) {
+  .header {
+        grid-template-areas: "hero hero" "hero hero" "logo btn";
+  }
+}
+
 .header__hero {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: hero;
-  max-height: 55rem;
+  max-height: 60rem;
   width: 100%;
   background: white url(../img/header_back-2-large.png);
   background-size: cover;
@@ -468,9 +474,33 @@ footer {
   }
 }
 
+@media only screen and (max-width: 37.5em) and (min-height: 650px) {
+  .header__hero {
+    height: 55rem;
+  }
+}
+
 @media only screen and (max-width: 27.5em) {
   .header__hero {
     height: 35rem;
+  }
+}
+
+@media only screen and (max-width: 27.5em) and (min-height: 650px) {
+  .header__hero {
+    height: 55rem;
+  }
+}
+
+@media only screen and (min-height: 550px) {
+  .header__hero {
+    height: 50rem;
+  }
+}
+
+@media only screen and (min-width: 800px) and (min-height: 800px) {
+  .header__hero {
+    height: 60rem;
   }
 }
 
