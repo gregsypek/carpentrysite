@@ -434,7 +434,6 @@ footer {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: hero;
-  max-height: 60rem;
   width: 100%;
   background: white url(../img/header_back-2-large.png);
   background-size: cover;
@@ -454,6 +453,12 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (min-width: 62.5em) and (min-height: 50em) {
+  .header__hero {
+    height: 65rem;
+  }
 }
 
 @media only screen and (max-width: 50em) {
@@ -492,15 +497,21 @@ footer {
   }
 }
 
-@media only screen and (min-height: 550px) {
+@media only screen and (max-width: 27.5em) and (min-height: 50em) {
   .header__hero {
-    height: 50rem;
+    height: 60rem;
   }
 }
 
-@media only screen and (min-width: 800px) and (min-height: 800px) {
+@media only screen and (min-width: 50em) and (min-height: 50em) {
   .header__hero {
     height: 60rem;
+  }
+}
+
+@media only screen and (max-width: 27.5em) and (min-height: 50em) {
+  .header__hero {
+    margin-top: 5rem;
   }
 }
 

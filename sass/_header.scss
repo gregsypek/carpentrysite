@@ -20,7 +20,7 @@
 
     &__hero {
         grid-area: hero;
-       max-height: 60rem;
+    //    max-height: 65rem;
         width: 100%;
         background: white url(../img/header_back-2-large.png);
         background-size: cover;
@@ -32,6 +32,9 @@
         align-items: start;
         justify-content: center;
 
+        @media only screen and (min-width: $bp-large) and(min-height: $bp-medium) {
+            height: 65rem;
+        }
         @media only screen and (max-width: $bp-medium) {
             height: 50rem;
         }
@@ -51,14 +54,20 @@
         @media only screen and (max-width: $bp-smallest) and (min-height:650px) {           
             height: 55rem;      
         }   
-        @media only screen and (min-height: 550px) {                    
-            height: 50rem;          
+        @media only screen and (max-width: $bp-smallest) and (min-height:$bp-medium) {           
+            height: 60rem;      
+        }   
+        // @media only screen and (min-height: 550px) {                    
+        //     height: 50rem;          
            
-        }  
-        @media only screen and (min-width: 800px) and(min-height:800px) {    
+        // }  
+        @media only screen and (min-width: $bp-medium) and(min-height:$bp-medium) {    
             height: 60rem;
 
         } 
+        @media only screen and (max-width: $bp-smallest) and (min-height:$bp-medium) {           
+            margin-top: 5rem;     
+        }   
        
         h1 {
             font-size: 5rem;
