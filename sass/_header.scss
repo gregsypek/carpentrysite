@@ -19,12 +19,11 @@
     }
 
     &__hero {
-        grid-area: hero;
-    //    max-height: 65rem;
-        width: 100%;
-        background: white url(../img/header_back-2-large.png);
+        grid-area: hero;  
+        height: 100%;
+        background: url(../img/header_back800x534.png) no-repeat;
         background-size: cover;
-        background-position: bottom right;
+        background-position: center bottom;
         padding: 5rem;
         margin-top: 1.5rem;
         display: flex;
@@ -33,22 +32,20 @@
         justify-content: center;
 
         @media only screen and (min-width: $bp-large) and(min-height: $bp-medium) {
+            
             height: 65rem;
         }
-        @media only screen and (max-width: $bp-medium) {
-            height: 50rem;
-        }
-        @media only screen and (max-width: $bp-medium) {
-            height: 50rem;
-        }
+        
         @media only screen and (max-width: $bp-small) {           
-            max-height: 50rem;      
+            max-height: 50rem; 
+            background: white url(../img/header-back599x400.png); 
         }
-        @media only screen and (max-width: $bp-small) and (min-height:650px) {           
-            height: 55rem;      
+        @media only screen and (max-width: $bp-small) and (min-height:640px) {           
+            height: 55rem; 
+            background: white url(../img/header-back478x500.png);  
         }
         @media only screen and (max-width: $bp-smallest) {                    
-            height: 35rem;        
+            max-height: 50rem;
            
         }    
         @media only screen and (max-width: $bp-smallest) and (min-height:650px) {           
@@ -57,14 +54,6 @@
         @media only screen and (max-width: $bp-smallest) and (min-height:$bp-medium) {           
             height: 60rem;      
         }   
-        // @media only screen and (min-height: 550px) {                    
-        //     height: 50rem;          
-           
-        // }  
-        @media only screen and (min-width: $bp-medium) and(min-height:$bp-medium) {    
-            height: 60rem;
-
-        } 
         @media only screen and (max-width: $bp-smallest) and (min-height:$bp-medium) {           
             margin-top: 5rem;     
         }   
