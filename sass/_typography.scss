@@ -23,7 +23,7 @@
     max-width: 25rem;
     width: 100%;
     cursor: pointer;
-    line-height: 1.5em;
+    // line-height: 1.5em;
     text-align: center;
     text-decoration: none;
 
@@ -36,7 +36,7 @@
 
 .btn--header,
 .btn--map {
-    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .5);
+    @include delicate-box-shadow;
 }
 
 // SVG AS ANCHOR

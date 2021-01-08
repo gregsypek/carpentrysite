@@ -1,0 +1,287 @@
+.header {
+    display: grid;
+    grid-gap: 2rem;
+    min-height: 85vh;
+    grid-template-areas:
+        "logo hero hero"
+        "btn hero hero";
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-areas:
+            "hero hero"
+            "logo btn";
+    }
+    @media only screen and (min-width: 800px) and(min-height:800px) {
+        grid-template-areas:
+            "hero hero"
+            "hero hero"
+            "logo btn";
+    }
+
+    &__hero {
+        grid-area: hero;  
+        height: 100%;
+        background: url(../img/header_back800x534.png) no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        padding: 5rem;
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+
+        @media only screen and (min-width: $bp-large) and(min-height: $bp-medium) {
+            
+            height: 65rem;
+        }
+        
+        @media only screen and (max-width: $bp-small) {           
+            max-height: 50rem; 
+            background: white url(../img/header-back599x400.png); 
+        }
+        @media only screen and (max-width: $bp-small) and (min-height:640px) {           
+            height: 55rem; 
+            background: white url(../img/header-back478x500.png);  
+        }
+        @media only screen and (max-width: $bp-smallest) {                    
+            max-height: 50rem;
+           
+        }    
+        @media only screen and (max-width: $bp-smallest) and (min-height:650px) {           
+            height: 55rem;      
+        }   
+        @media only screen and (max-width: $bp-smallest) and (min-height:$bp-medium) {           
+            height: 60rem;      
+        }   
+        @media only screen and (max-width: $bp-smallest) and (min-height:$bp-medium) {           
+            margin-top: 5rem;     
+        }   
+       
+        h1 {
+            font-size: 5rem;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 4.5rem;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 4rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 3rem;            
+                
+            }
+
+        }
+
+        p {
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: .2rem;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 2rem;
+            }
+        }
+
+        &>* {
+            @extend %color-light-transparent;
+            padding: 5px;
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .5);
+        }
+    }
+
+    &__logo {
+        @extend %color-light-transparent;
+        grid-area: logo;
+        // min-height: 20rem;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+
+        img {
+            height: 20rem;
+            width: auto;
+            @media only screen and (max-width: $bp-large) {
+                height: 18rem;
+            }
+            @media only screen and (max-width: $bp-medium) {
+                height: 16rem;
+            }
+            @media only screen and (max-width: $bp-small) {
+                height: 14rem;
+            }
+            @media only screen and (max-width: $bp-smallest) {
+                height: 12rem;
+            }
+
+        }
+    }
+
+    &__btn {
+        @extend %color-light-transparent;
+        grid-area: btn;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        a {
+            display: grid;
+          grid-column: 1/-1;
+          text-align: center;
+          width: 100%;
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.5rem;
+            } 
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 1.3rem;
+                width:80%;
+               
+            } 
+        }      
+
+    }
+}
+
+.btn--header {
+    @extend %btn;
+    grid-area: btn;
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1rem;
+        width:50%;
+    }
+}
+
+// Navigation
+.menu {
+
+    margin-bottom: 4rem;
+
+
+    &__list {
+        display: grid;
+        grid-gap: 2rem;
+        margin: 0;
+        list-style: none;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        @media only screen and (max-width: $bp-large) {
+            height: 0;
+        }
+
+        a {
+            @extend %btn;
+            display: block;
+            margin: 0 auto;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.5) 1rem 1rem 1rem;
+            @media only screen and (max-width: $bp-large) {
+                display: none;
+            }
+
+        }
+    }
+
+    &__burger {
+        display: none;
+        height: 100%;
+        padding: 0;
+        @media only screen and (max-width: $bp-large) {
+            display: block;
+        }
+
+        &-nav {
+            display: grid;
+            justify-items: center;
+            padding: 10px;
+            position: fixed;
+            overflow: hidden;
+            left: 0;
+            width: 100%;
+            top: -300px;
+            background-color: rgba($color-black, .9);
+            transition: all .3s linear;
+            z-index: 10;           
+            text-transform: uppercase;
+
+            li {
+                align-self: center;
+                letter-spacing: .8rem;
+                font-weight: 700;
+                list-style: none;
+                width: 50%;
+                border-bottom: .5rem solid $color-brown-2;
+            }
+
+            a {
+                display: block;
+                text-align: center;
+                padding: 2rem;
+                line-height: 100%;
+                font-size: 2.5rem;
+                color: $color-light-2;
+                text-decoration: none;
+            }
+
+            &.on {
+                top: 0;
+                margin: 0;
+            }
+        }
+
+        &-icons {
+            position: fixed;
+            right: 4.9rem;            
+            cursor: pointer;
+           display: grid;
+            font-size: 5rem;
+            line-height: 6rem;
+            transition: all .3s linear;
+            z-index: 200;
+            @media only screen and (max-width: $bp-medium) {
+                right: 4rem;
+                font-size: 5.8rem;
+            }
+        
+            @media only screen and (max-width: $bp-small) {
+                right: 2rem;
+                font-size: 5.5rem;
+            }
+        
+            @media only screen and (max-width: $bp-smallest) {
+                right: 1rem;
+               
+            }
+
+
+            .fas {
+                display: none;
+                padding: 3px 6px;
+                justify-self: right;
+               
+            }
+
+            i.on {
+                display: block;
+            }
+
+            .fa-bars {
+                color: $color-black;
+                background: rgba(223, 211, 195, 0.7);
+            }
+
+            .fa-times {
+                color: $color-light-2;
+            }
+        }
+
+    }
+
+}

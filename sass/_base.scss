@@ -1,5 +1,5 @@
 //COLOR VARIABLES
-$color-brown-1:#D09E88;
+$color-brown-1:#aa8372;
 $color-brown-2: #9B8281; //rgb(155,130,129)
 
 $color-black: #272727;
@@ -20,10 +20,27 @@ $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px
 $bp-small: 37.5em; //600px
-$bp-smallest: 27.5em //440px
+$bp-smallest: 27.5em; //440px
 
 
+@mixin delicate-box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
+
+@mixin btnDefault {
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    line-height: 1.5em;
+    border: none;
+    font-weight: 400;
+    outline: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    line-height: 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
 
 :root {
     --black: #272727;
@@ -60,7 +77,7 @@ html {
     @media only screen and (max-width: $bp-smallest) {
         font-size: 50%; // 1em = 8px
     }
-      
+
 }
 
 *,
@@ -72,7 +89,7 @@ html {
 body {
     background-image: url("../img/topography.svg"),
         linear-gradient(110deg, $color-light-2, $color-dark-1);
-    background-size: 540px, auto;    
+    background-size: 540px, auto;
 
     min-height: calc(100vh - 100px);
     margin: 5rem;
@@ -86,10 +103,12 @@ body {
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        margin:1rem;
+        margin: 1rem;
     }
 
 }
+
+
 
 h1,
 h2,
