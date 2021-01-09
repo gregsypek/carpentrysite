@@ -69,10 +69,20 @@
 			</nav>
 			<section class="header">
 				<header class="header__hero">
-					<img
-						src="./img/header_back800x534.png"
-						alt="carpenter measuring wood"
-					/>
+					<picture>
+						<source
+							srcset="./img/header-back478x500.png"
+							media="(max-width: 37.5em)"
+						/>
+						<source
+							srcset="./img/header-back599x400.png"
+							media="(max-width: 50em)"
+						/>
+						<img
+							src="./img/header_back800x534.png"
+							alt="carpenter measuring wood"
+						/>
+					</picture>
 				</header>
 
 				<div class="header__introduction">
