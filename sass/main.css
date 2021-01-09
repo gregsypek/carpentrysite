@@ -411,12 +411,22 @@ footer {
 .header {
   display: -ms-grid;
   display: grid;
+  position: relative;
+  overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 85vh;
+  min-height: 80vh;
       grid-template-areas: "hero img img img" "hero img img img";
-  grid-gap: 5rem;
+  grid-gap: 2rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .header {
+        grid-template-areas: "hero hero" "hero hero";
+    min-height: 70vh;
+    grid-gap: 0;
+  }
 }
 
 .header__hero {
@@ -425,12 +435,24 @@ footer {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: img;
+  width: 100%;
 }
 
 .header__hero img {
-  width: 100%;
-  height: 100%;
-  opacity: .8;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .header__hero img {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .header__introduction {
@@ -466,6 +488,13 @@ footer {
   font-size: 2.5rem;
   text-align: center;
   padding: 5rem 10rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .header__introduction h4 {
+    background-color: rosybrown;
+    background-color: rgba(223, 211, 195, 0.9);
+  }
 }
 
 .header__introduction a {
