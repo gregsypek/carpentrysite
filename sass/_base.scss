@@ -1,18 +1,17 @@
 //COLOR VARIABLES
-$color-brown-1:#aa8372;
-$color-brown-2: #9B8281; //rgb(155,130,129)
+$color-brown-1: #aa8372;
+$color-brown-2: #9b8281; //rgb(155,130,129)
 
 $color-black: #272727;
 
-$color-light-1: #F0ECE2;
-$color-light-2: #DFD3C3; //rgb(223,211,195)
+$color-light-1: #f0ece2;
+$color-light-2: #dfd3c3; //rgb(223,211,195)
 
 $color-dark-1: #c7b198;
-$color-dark-2:#596e79;
+$color-dark-2: #596e79;
 
 // FONT VARIABLES
-$font-primary: 'Roboto',
-sans-serif;
+$font-primary: "Roboto", sans-serif;
 
 // RESPONSIVE  BREAKPOINTS
 
@@ -22,93 +21,85 @@ $bp-medium: 50em; // 800px
 $bp-small: 37.5em; //600px
 $bp-smallest: 27.5em; //440px
 
-
 @mixin delicate-box-shadow {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
 @mixin btnDefault {
-    text-transform: uppercase;
-    letter-spacing: .2em;
-    line-height: 1.5em;
-    border: none;
-    font-weight: 400;
-    outline: none;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    line-height: 1.5em;
-    text-align: center;
-    text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	line-height: 1.5em;
+	border: none;
+	font-weight: 400;
+	outline: none;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	line-height: 1.5em;
+	text-align: center;
+	text-decoration: none;
 }
 
 :root {
-    --black: #272727;
+	--black: #272727;
 }
 
-
 html {
+	box-sizing: border-box;
+	font-family: $font-primary, sans-serif;
+	font-weight: 400;
+	font-size: 62.5%; //10px
+	color: var(--black);
+	// max-width: 1400px;
+	// margin: 0 auto;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
 
-    box-sizing: border-box;
-    font-family: $font-primary, sans-serif;
-    font-weight: 400;
-    font-size: 62.5%; //10px
-    color: var(--black);
-    // max-width: 1400px;
-    // margin: 0 auto;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+	@media only screen and (max-width: $bp-largest) {
+		font-size: 60%; //1em= 9.6px
+	}
 
-    @media only screen and (max-width: $bp-largest) {
-        font-size: 60%; //1em= 9.6px
-    }
+	@media only screen and (max-width: $bp-large) {
+		font-size: 58%; //1em= 9.28px
+	}
 
-    @media only screen and (max-width: $bp-large) {
-        font-size: 58%; //1em= 9.28px
-    }
+	@media only screen and (max-width: $bp-medium) {
+		font-size: 56%; //1em= 8,96px
+	}
 
-    @media only screen and (max-width: $bp-medium) {
-        font-size: 56%; //1em= 8,96px
-    }
+	@media only screen and (max-width: $bp-small) {
+		font-size: 52%; // 1em = 8,32px
+	}
 
-    @media only screen and (max-width: $bp-small) {
-        font-size: 52%; // 1em = 8,32px
-    }
-
-    @media only screen and (max-width: $bp-smallest) {
-        font-size: 50%; // 1em = 8px
-    }
-
+	@media only screen and (max-width: $bp-smallest) {
+		font-size: 50%; // 1em = 8px
+	}
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-    background-image: url("../img/topography.svg"),
-        linear-gradient(110deg, $color-light-2, $color-dark-1);
-    background-size: 540px, auto;
+	background-image: url("../img/topography.svg"),
+		linear-gradient(110deg, $color-light-2, $color-dark-1);
+	background-size: 540px, auto;
 
-    min-height: calc(100vh - 100px);
-    margin: 5rem;
+	min-height: calc(100vh - 100px);
+	margin: 5rem;
 
-    @media only screen and (max-width: $bp-medium) {
-        margin: 4rem;
-    }
+	@media only screen and (max-width: $bp-medium) {
+		margin: 4rem;
+	}
 
-    @media only screen and (max-width: $bp-small) {
-        margin: 2rem;
-    }
+	@media only screen and (max-width: $bp-small) {
+		margin: 2rem;
+	}
 
-    @media only screen and (max-width: $bp-smallest) {
-        margin: 1rem;
-    }
-
+	@media only screen and (max-width: $bp-smallest) {
+		margin: 1rem;
+	}
 }
-
-
 
 h1,
 h2,
@@ -116,10 +107,10 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 5px 0;
+	margin: 0 0 5px 0;
 }
 
-.wrapper {
-    display: grid;
-    grid-gap: 2rem;
+#wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
 }
