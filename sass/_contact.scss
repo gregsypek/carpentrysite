@@ -1,97 +1,93 @@
 .contact {
-    display: grid;
-    grid-gap: 2rem;
-    justify-content: center;
-    align-content: center;
-    width: 80vw;
-    margin: 0 auto;
-      grid-template-areas:
-        "header header"
-        "adress photo"
-        "phone photo"
-        "button photo";
+	display: grid;
+	grid-gap: 2rem;
+	justify-content: center;
+	align-content: center;
 
+	margin: 0 auto;
+	grid-template-areas:
+		"header header"
+		"adress photo"
+		"phone photo"
+		"button photo";
 
-    @media only screen and (max-width: $bp-small) {
-        grid-template-areas:
-            "header header"
-            "adress button"
-            "photo photo "
-            "phone phone";
-    }
+	@media only screen and (max-width: $bp-small) {
+		grid-template-areas:
+			"header header"
+			"adress button"
+			"photo photo "
+			"phone phone";
+	}
 
-    &__header {
-        grid-area: header;
-        width: 100%;
-        font-size: 4rem;
-        line-height: 5rem;
-        padding: .5rem;
-        text-align: center;     
+	&__header {
+		grid-area: header;
+		width: 100%;
+		font-size: 4rem;
+		line-height: 5rem;
+		padding: 0.5rem;
+		text-align: center;
 
-        @extend %color-light-transparent;    
+		@extend %color-light-transparent;
 
-        @media only screen and (max-width: $bp-small) {
-            font-size: 3.5rem;     
-          } 
-          @media only screen and (max-width: $bp-smallest) {
-            font-size: 3rem;     
-          } 
-    }
+		@media only screen and (max-width: $bp-small) {
+			font-size: 3.5rem;
+		}
+		@media only screen and (max-width: $bp-smallest) {
+			font-size: 3rem;
+		}
+	}
 
-    &__photo {
-        grid-area: photo;
+	&__photo {
+		grid-area: photo;
 
+		img {
+			width: 100%;
 
-        img {
-            width: 100%;
-      
-            max-width: 600px;
-            object-fit: cover;
+			max-width: 600px;
+			object-fit: cover;
+		}
+	}
 
-        }
-    }
+	&__adress {
+		grid-area: adress;
+		font-size: 1.8rem;
+		align-self: end;
+		padding: 1rem;
+		margin: 0;
+		text-align: left;
+		@extend %color-light-transparent;
+	}
 
-    &__adress {
-        grid-area: adress;
-        font-size: 1.8rem;
-        align-self: end;
-        padding: 1rem;
-        margin: 0;
-        text-align: left;
-        @extend %color-light-transparent;
-    }
+	&__phone {
+		grid-area: phone;
+		font-size: 1.8rem;
+		align-self: center;
+		padding: 2rem;
+		text-align: left;
+		@extend %color-light-transparent;
 
-    &__phone {
-        grid-area: phone;
-        font-size: 1.8rem;
-        align-self: center;
-        padding: 2rem;
-        text-align: left;
-        @extend %color-light-transparent;
+		a {
+			display: block;
+			color: inherit;
+			padding: 2rem;
 
-        a {
-            display: block;
-            color: inherit;
-            padding: 2rem;
+			@media only screen and (max-width: $bp-small) {
+				padding: 1rem;
+			}
+		}
+	}
 
-            @media only screen and (max-width: $bp-small) {
-                padding: 1rem;
-            }
+	&__button {
+		grid-area: button;
+		justify-self: center;
 
-        }
-    }
+		@media only screen and (max-width: $bp-medium) {
+			align-self: center;
+		}
 
-    &__button {
-        grid-area: button;
-        justify-self: center;
-
-        @media only screen and (max-width: $bp-medium) {
-            align-self: center;
-        }
-
-        a {
-            display: block;
-            @extend %btn;
-        }
-    }
+		a {
+			display: block;
+			@extend %btn;
+		}
+	}
 }
